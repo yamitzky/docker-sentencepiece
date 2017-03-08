@@ -2,7 +2,7 @@ FROM alpine
 
 RUN apk add --no-cache git automake autoconf automake libtool g++ protobuf protobuf-dev make
 
-RUN git clone --depth 1 https://github.com/yamitzky/sentencepiece.git /tmp/sentencepiece && \
+RUN git clone --depth 1 https://github.com/google/sentencepiece.git /tmp/sentencepiece && \
       cd /tmp/sentencepiece && \
       ./autogen.sh && \
       ./configure && \
